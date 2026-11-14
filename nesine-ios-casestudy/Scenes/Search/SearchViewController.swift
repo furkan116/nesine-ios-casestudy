@@ -85,6 +85,7 @@ final class SearchViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.automaticallyShowsCancelButton = false
         searchController.searchBar.placeholder = "Uygulama ara...."
         searchIconView = searchController.searchBar.searchTextField.leftView
         navigationItem.searchController = searchController
