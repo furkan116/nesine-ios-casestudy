@@ -104,9 +104,15 @@ final class SearchViewController: UIViewController {
 
     private func setupCollectionView() {
         view.addSubview(collectionView)
-        collectionView.backgroundView = emptyLabel
+        view.addSubview(emptyLabel)
+
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+
+        emptyLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(16)
         }
     }
 
